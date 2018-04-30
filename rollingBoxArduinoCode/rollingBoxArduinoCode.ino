@@ -35,9 +35,24 @@ void loop(){
   //observed obstacles
   int averageDistanceFront= getAverageDistanceFront();
   int averageDistanceBack= getAverageDistanceBack();
-  if(averageDistanceFront<=4){
+  if(averageDistanceFront<=6){
         stopVehicle();
-      } else if(averageDistanceBack<4){
+        delay(1000);
+        servo1.attach(9);
+        servo2.attach(10);
+        servo1.write(180); 
+        servo2.write(0); 
+        delay(2000);
+        stopVehicle();
+        
+      } else if(averageDistanceBack<6){
+        stopVehicle();
+        delay(1000);
+        servo1.attach(9);
+        servo2.attach(10);    
+        servo1.write(0);
+        servo2.write(180);
+        delay(2000);
         stopVehicle();
         } else {
           //handle input for navigation
@@ -85,16 +100,16 @@ void left(){
   servo1.attach(9);
   servo2.attach(10);
   
-  servo1.write(180);
-  servo2.write(180);
+  servo1.write(180); 
+  servo2.write(180); 
 }
 
 void right(){
   servo1.attach(9);
   servo2.attach(10);  
   
-  servo1.write(0);
-  servo2.write(0);
+  servo1.write(0); 
+  servo2.write(0); 
 }
 
 void stopVehicle(){

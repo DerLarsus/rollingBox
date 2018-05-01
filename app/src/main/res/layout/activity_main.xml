@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:id="@+id/screen"
+    tools:context="com.controller.box.boxcontrol.MainActivity">
+
+    <ImageButton
+        android:id="@+id/buttonForward"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:layout_toLeftOf="@+id/buttonRight"
+        android:layout_toStartOf="@+id/buttonRight"
+        android:clickable="true"
+        android:cropToPadding="false"
+        android:src="@drawable/ic_arrow_upward_black_24dp"
+        android:background="@null"
+        />
+
+    <ImageButton
+        android:id="@+id/buttonLeft"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/buttonForward"
+        android:layout_toLeftOf="@+id/buttonForward"
+        android:layout_toStartOf="@+id/buttonForward"
+        android:clickable="true"
+        android:cropToPadding="false"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:background="@null"
+        />
+
+    <ImageButton
+        android:id="@+id/buttonRight"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/buttonBackward"
+        android:layout_toEndOf="@+id/buttonBackward"
+        android:layout_toRightOf="@+id/buttonBackward"
+        android:clickable="true"
+        android:cropToPadding="false"
+        android:src="@drawable/ic_arrow_forward_black_24dp"
+        android:background="@null"
+        />
+
+    <ImageButton
+        android:id="@+id/buttonBackward"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/buttonLeft"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:clickable="true"
+        android:cropToPadding="false"
+        android:src="@drawable/ic_arrow_downward_black_24dp"
+        android:background="@null"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/buttonConnect"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:cropToPadding="false"
+        android:src="@drawable/ic_bluetooth_connected_black_24dp"
+        android:background="@null"/>
+</RelativeLayout>
